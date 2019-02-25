@@ -280,6 +280,8 @@ gem 'reform', '~> 2.2.0'
 gem 'reform-rails', '~> 0.1.7'
 gem 'roar', '~> 1.1.0'
 
+gem 'omniauth-okta'
+
 platforms :mri, :mingw, :x64_mingw do
   group :mysql2 do
     gem 'mysql2', '~> 0.5.0'
