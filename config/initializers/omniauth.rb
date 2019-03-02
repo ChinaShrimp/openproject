@@ -30,4 +30,7 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   unless Rails.env.production?
     provider :developer, fields: [:first_name, :last_name, :email]
   end
+
+  provider :wechat, ENV["WECHAT_APP_ID"], ENV["WECHAT_APP_SECRET"]
+  provider :okta, ENV['OKTA_CLIENT_ID'], ENV['OKTA_CLIENT_SECRET']
 end

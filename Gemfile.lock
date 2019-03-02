@@ -92,6 +92,17 @@ GIT
       thor (~> 0.19)
 
 PATH
+  remote: ../openproject-plugins/openproject-timesheet
+  specs:
+    openproject-timesheet (0.0.3)
+      rails (~> 5.0)
+
+PATH
+  remote: ../openproject-plugins/openproject-vue_template
+  specs:
+    openproject-vue_template (0.0.1)
+
+PATH
   remote: modules/auth_plugins
   specs:
     openproject-auth_plugins (8.3.0)
@@ -428,6 +439,8 @@ GEM
       railties (>= 3.0.0)
     faker (1.9.1)
       i18n (>= 0.7)
+    faraday (0.15.4)
+      multipart-post (>= 1.2, < 3)
     fastimage (2.1.5)
     ffi (1.9.25)
     flamegraph (0.9.5)
@@ -505,6 +518,7 @@ GEM
     json_spec (1.1.5)
       multi_json (~> 1.0)
       rspec (>= 2.0, < 4.0)
+    jwt (2.1.0)
     kgio (2.11.2)
     ladle (1.0.1)
       open4 (~> 1.0)
@@ -550,6 +564,8 @@ GEM
     msgpack (1.2.6)
     multi_json (1.13.1)
     multi_test (0.1.2)
+    multi_xml (0.6.0)
+    multipart-post (2.0.0)
     mustermann (1.0.3)
     mustermann-grape (1.0.0)
       mustermann (~> 1.0.0)
@@ -562,11 +578,26 @@ GEM
       mini_portile2 (~> 2.4.0)
     nokogumbo (2.0.1)
       nokogiri (~> 1.8, >= 1.8.4)
+    oauth2 (1.4.1)
+      faraday (>= 0.8, < 0.16.0)
+      jwt (>= 1.0, < 3.0)
+      multi_json (~> 1.3)
+      multi_xml (~> 0.5)
+      rack (>= 1.2, < 3)
     oj (3.7.8)
     okcomputer (1.17.3)
+    omniauth-oauth2 (1.6.0)
+      oauth2 (~> 1.1)
+      omniauth (~> 1.9)
+    omniauth-okta (0.1.1)
+      omniauth (~> 1.5)
+      omniauth-oauth2 (>= 1.4.0, < 2.0)
     omniauth-saml (1.10.1)
       omniauth (~> 1.3, >= 1.3.2)
       ruby-saml (~> 1.7)
+    omniauth-wechat-oauth2 (0.1.0)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     open4 (1.3.4)
     openid_connect (1.1.6)
       activemodel
@@ -947,9 +978,11 @@ DEPENDENCIES
   oj (~> 3.7.0)
   okcomputer (~> 1.17.3)
   omniauth!
+  omniauth-okta
   omniauth-openid-connect!
   omniauth-openid_connect-providers!
   omniauth-saml (~> 1.10.1)
+  omniauth-wechat-oauth2
   openproject-auth_plugins!
   openproject-auth_saml!
   openproject-avatars!
@@ -964,9 +997,11 @@ DEPENDENCIES
   openproject-openid_connect!
   openproject-pdf_export!
   openproject-reporting!
+  openproject-timesheet!
   openproject-token (~> 1.0.1)
   openproject-translations!
   openproject-two_factor_authentication!
+  openproject-vue_template!
   openproject-webhooks!
   openproject-xls_export!
   parallel_tests (~> 2.27.1)
