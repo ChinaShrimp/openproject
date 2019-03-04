@@ -92,15 +92,15 @@ GIT
       thor (~> 0.19)
 
 PATH
+  remote: ../openproject-plugins/openproject-proprietor
+  specs:
+    openproject-proprietor (0.0.1)
+
+PATH
   remote: ../openproject-plugins/openproject-timesheet
   specs:
     openproject-timesheet (0.0.3)
       rails (~> 5.0)
-
-PATH
-  remote: ../openproject-plugins/openproject-vue_template
-  specs:
-    openproject-vue_template (0.0.1)
 
 PATH
   remote: modules/auth_plugins
@@ -996,12 +996,12 @@ DEPENDENCIES
   openproject-my_project_page!
   openproject-openid_connect!
   openproject-pdf_export!
+  openproject-proprietor!
   openproject-reporting!
   openproject-timesheet!
   openproject-token (~> 1.0.1)
   openproject-translations!
   openproject-two_factor_authentication!
-  openproject-vue_template!
   openproject-webhooks!
   openproject-xls_export!
   parallel_tests (~> 2.27.1)

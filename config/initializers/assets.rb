@@ -26,4 +26,7 @@ OpenProject::Application.configure do
     vendor/enjoyhint.js
     bundles/openproject-legacy-app.js
   )
+
+  Rails.application.config.assets.precompile += %w( proprietor/js/app.js )
+  Rails.application.config.assets.precompile += %w( proprietor/css/app.css )
 end
