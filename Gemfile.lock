@@ -92,6 +92,11 @@ GIT
       thor (~> 0.19)
 
 PATH
+  remote: ../openproject-plugins/openproject-demo
+  specs:
+    openproject-demo (0.0.1)
+
+PATH
   remote: ../openproject-plugins/openproject-proprietor
   specs:
     openproject-proprietor (0.0.1)
@@ -988,6 +993,7 @@ DEPENDENCIES
   openproject-avatars!
   openproject-backlogs!
   openproject-costs!
+  openproject-demo!
   openproject-documents!
   openproject-github_integration!
   openproject-global_roles!
