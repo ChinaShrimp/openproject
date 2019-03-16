@@ -30,6 +30,7 @@
 module Redmine::MenuManager::MenuHelper
   include ::Redmine::MenuManager::TopMenuHelper
   include ::Redmine::MenuManager::WikiMenuHelper
+  include ::Redmine::MenuManager::TopMenuBimHelper
   include AccessibilityHelper
 
   # Returns the current menu item name
