@@ -33,19 +33,19 @@ module Redmine::MenuManager::TopMenuBimHelper
 
   def render_top_menu_left_bim
     content_tag :ul, id: 'account-nav-left', class: 'menu_root account-nav' do
-      [render_main_top_menu_nodes,
-       render_construct_module_top_menu_node].join.html_safe
+      [render_main_top_menu_nodes].join.html_safe
+      # render_construct_module_top_menu_node].join.html_safe
     end
   end
 
   def render_top_menu_right_bim
     content_tag :ul, id: 'account-nav-right', class: 'menu_root account-nav' do
-      [render_module_top_menu_node,
+      [render_construct_module_top_menu_node,
        render_user_top_menu_node].join.html_safe
     end
   end
 
-  private
+  private 
 
   def render_user_top_menu_node(items = first_level_menu_items_for(:bim_account_menu))
     if User.current.logged?

@@ -37,7 +37,7 @@ module Redmine::MenuManager::TopMenuBim::ConstructModuleMenu
 
   def render_construct_module_dropdown
     # label = !!(@project && !@project.name.empty?) ? @project.name : t(:label_select_project)
-    label = "选择模块"
+    label = $SELECTED_MODULE_NAME
     render_menu_dropdown_with_items(
       label: label,
       label_options: { id: 'module-menu' },
