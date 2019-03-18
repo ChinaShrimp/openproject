@@ -9,7 +9,7 @@ Redmine::MenuManager.map :bim_account_menu do |menu|
             { controller: '/me', action: 'account' },
             if: Proc.new { User.current.logged? }
   menu.push :administration,
-            { controller: '/users', action: 'index' },
+            { controller: '/bim_admin', action: 'index' },
             if: Proc.new { User.current.admin? }
   menu.push :logout, :signout_path,
             if: Proc.new { User.current.logged? }
@@ -37,4 +37,31 @@ Redmine::MenuManager.map :bim_me_menu do |menu|
             if: Proc.new { Setting.users_deletable_by_self? },
             last: :delete_account,
             icon: 'icon2 icon-delete'
+end
+
+Redmine::MenuManager.map :bim_admin_menu do |menu|
+  menu.push :users,
+            { controller: '/users' },
+            caption: :label_user_plural,
+            icon: 'icon2 icon-user'
+
+  menu.push :groups,
+            { controller: '/groups' },
+            caption: :label_group_plural,
+            icon: 'icon2 icon-group'
+  menu.push :roles,
+            { controller: '/roles' },
+            caption: :label_role_and_permissions,
+            icon: 'icon2 icon-settings'
+
+  menu.push :announcements,
+            { controller: '/announcements', action: 'edit' },
+            caption: 'Announcement',
+            icon: 'icon2 icon-news'
+
+  menu.push :info,
+            { controller: '/admin', action: 'info' },
+            caption: :label_information_plural,
+            last: true,
+            icon: 'icon2 icon-info1'
 end

@@ -64,7 +64,7 @@ module Redmine::MenuManager::TopMenuBim::ConstructModuleMenu
       { 
         controller: '/dashboard', action: 'index' 
       },
-      caption: "首页",
+      caption: "项目总况",
       icon: "icon-show-all-projects icon4",
       html: {
         accesskey: OpenProject::AccessKeys.key_for(:project_search)
