@@ -65,3 +65,30 @@ Redmine::MenuManager.map :bim_admin_menu do |menu|
             last: true,
             icon: 'icon2 icon-info1'
 end
+
+Redmine::MenuManager.map :bim_progress_menu do |menu|
+  menu.push :users,
+            { controller: '/progress' },
+            caption: :label_user_plural,
+            icon: 'icon2 icon-user'
+
+  menu.push :groups,
+            { controller: '/groups' },
+            caption: :label_group_plural,
+            icon: 'icon2 icon-group'
+  menu.push :roles,
+            { controller: '/roles' },
+            caption: :label_role_and_permissions,
+            icon: 'icon2 icon-settings'
+
+  menu.push :announcements,
+            { controller: '/announcements', action: 'edit' },
+            caption: 'Announcement',
+            icon: 'icon2 icon-news'
+
+  menu.push :info,
+            { controller: '/admin', action: 'info' },
+            caption: :label_information_plural,
+            last: true,
+            icon: 'icon2 icon-info1'
+end
